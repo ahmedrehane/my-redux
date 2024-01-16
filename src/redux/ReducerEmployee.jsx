@@ -6,7 +6,7 @@ const initState={
     employes:[]
 }
 
-export const ReducerEmployee=(state=initState,action)=>{
+export const reducerEmployee=(state=initState,action)=>{
 switch (action.type) {
     case type.ADD_EMPLOYE :
         return {...state,employes:[...state.employes,action.payload]}
@@ -14,7 +14,7 @@ switch (action.type) {
         
 
     default:
-      return state;
+      return  state;
 }
 
 }
