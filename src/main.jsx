@@ -7,8 +7,14 @@ import {legacy_createStore as createstore}  from 'redux'
 import { Provider } from 'react-redux'
 import  {reducerEmployee} from './redux/ReducerEmployee.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+
+ const root = ReactDOM.createRoot(document.getElementById('root'))
+ const store=createstore(reducerEmployee)
+ ;root.render(
+
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>,
 )
