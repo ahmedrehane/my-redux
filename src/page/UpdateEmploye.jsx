@@ -1,11 +1,15 @@
 import React from "react";
 
-const UpdateEmployee = () =>{
+const UpdateEmploye = () =>{
     return(
         <div>Employee</div>
     )
     }
     
-    export default UpdateEmployee
+   
+   
+   
+   
+     export default UpdateEmploye
 
     

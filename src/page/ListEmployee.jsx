@@ -10,13 +10,11 @@ const ListEmployee = () =>{
         <div>
         <h3>Liste Employe</h3>
         <div className="row">
-        <Employee  employe={{numero:10,nom:"REHANE",prenom:"AHMED",adresse:"sidi maarouf zenith 1"}} />
-        <Employee  employe={{numero:10,nom:"REHANE",prenom:"AHMED",adresse:"sidi maarouf zenith 1"}} />    
-        <Employee  employe={{numero:10,nom:"REHANE",prenom:"AHMED",adresse:"sidi maarouf zenith 1"}} />
-        <Employee  employe={{numero:10,nom:"REHANE",prenom:"AHMED",adresse:"sidi maarouf zenith 1"}} />
-        <Employee  employe={{numero:10,nom:"REHANE",prenom:"AHMED",adresse:"sidi maarouf zenith 1"}} />
-        <Employee  employe={{numero:10,nom:"REHANE",prenom:"AHMED",adresse:"sidi maarouf zenith 1"}} />
-
+    {employes.map((emp,index)=>{
+        return(
+        <Employee employe={emp} key={index}/> 
+        )
+    })}
         </div>
 
         </div>

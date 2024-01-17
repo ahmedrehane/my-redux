@@ -16,7 +16,7 @@ e.preventDefault();
 
     return(
         <div className="ofsset-lg-9 col-lg-12">
-          <h3>Ajout Employe {employes.length}</h3>
+          <h3>Ajoute Employe {employes.length}</h3>
         <form onSubmit={handleSubmit}>
   <div className="mb-3">
     <label htmlFor="numero" className="form-label">
@@ -50,7 +50,7 @@ e.preventDefault();
   </div>
   
   <button  className="btn btn-primary" onClick={()=>dispatch(addEmployee(numero,nom,prenom,adresse))}>
-    Submit
+    Ajouter
     </button>
 </form>
 </div>
