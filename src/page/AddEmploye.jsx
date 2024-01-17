@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  useDispatch } from "react-redux";
+import {  useDispatch,useSelector} from "react-redux";
 import   {addEmployee} from '../redux/ActionEmployee'
 
 
@@ -9,10 +9,15 @@ const [nom,setNom]=useState('')
 const [prenom,setPrenom]=useState('')
 const [adresse,setAdresse]=useState('')
 const dispatch=useDispatch()
+const employes=useSelector(state=>state.employes)
+const handleSubmit =(e) =>{
+e.preventDefault();
+}
 
     return(
         <div className="ofsset-lg-9 col-lg-12">
-        <form>
+          <h3>Ajout Employe {employes.length}</h3>
+        <form onSubmit={handleSubmit}>
   <div className="mb-3">
     <label htmlFor="numero" className="form-label">
       numero

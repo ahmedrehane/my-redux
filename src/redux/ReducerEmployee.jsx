@@ -4,6 +4,7 @@ import * as type from './TypeActionEmployee'
 
 const initState={
     employes:[]
+    
 }
 
 export const reducerEmployee=(state=initState,action)=>{
