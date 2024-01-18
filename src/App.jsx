@@ -4,6 +4,8 @@ import AddEmploye from './page/AddEmploye'
 import ListEmployee from './page/ListEmployee'
 import { Route,Routes} from 'react-router-dom'
 import Home from './page/Home'
+import NotFound from './page/NotFound'
+import Menu from './Components/Menu'
 
 
 
@@ -13,11 +15,13 @@ function App() {
   return (
     <>
       <div className='App'>
-        <h1>App</h1>
+        <Menu/>
         <Routes>
         <Route path='/' element={<Home/>}/> 
-        <Route path='/emplyes' element={<ListEmployee/>}/> 
-
+        <Route path='/employe' element={<ListEmployee/>}/> 
+        <Route path='/addEmploye' element={<AddEmploye/>}/> 
+        <Route path='*' element={<NotFound/>}/>
+        
         </Routes>
        
       
