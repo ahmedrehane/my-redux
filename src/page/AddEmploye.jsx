@@ -49,7 +49,7 @@ e.preventDefault();
      onChange={(e)=>setAdresse(e.target.value)}/>
   </div>
   
-  <button  className="btn btn-primary" onClick={()=>dispatch(addEmployee(numero,nom,prenom,adresse))}>
+  <button  className="btn btn-primary" onClick={()=>dispatch(addEmployee(parseInt (numero),nom,prenom,adresse))}>
     Ajouter
     </button>
 </form>
