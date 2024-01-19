@@ -12,5 +12,6 @@ export const deleteEmployee=(numero)=>{
 export const updateEmployee=(numero,nom,prenom,adresse)=>{
 
     return{type:type.UPDATE_EMPLOYE,payload:{numero:numero,nom:nom,prenom:prenom,adresse:adresse}}
+    
 }
 

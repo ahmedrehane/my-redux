@@ -6,6 +6,7 @@ import { Route,Routes} from 'react-router-dom'
 import Home from './page/Home'
 import NotFound from './page/NotFound'
 import Menu from './Components/Menu'
+import UpdateEmploye from './page/UpdateEmploye'
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/' element={<Home/>}/> 
         <Route path='/employe' element={<ListEmployee/>}/> 
         <Route path='/addEmploye' element={<AddEmploye/>}/> 
+        <Route path='/updateEmploye/:numero' element={<UpdateEmploye/>}/>
         <Route path='*' element={<NotFound/>}/>
         
         </Routes>

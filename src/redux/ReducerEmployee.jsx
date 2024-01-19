@@ -14,6 +14,17 @@ switch (action.type) {
         
     case type.DELETE_EMPLOYE:
     return{...state,employes:state.employes.filter(emp=>emp.numero!==action.payload)}
+    case type.UPDATE_EMPLOYE:
+        return {...state,employes:state.employes.map(emp=>{
+            if(emp.numero!==action.payload.numero){
+                return {...emp}
+            }else{
+               const {nom,prenom,adresse}=action.payload
+                return {...emp,nom:nom,prenom:prenom,adresse:adresse}
+            }
+        })
+
+        }
     default:
       return  state;
 }

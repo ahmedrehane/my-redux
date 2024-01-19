@@ -1,6 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux"
 import {deleteEmployee} from '../redux/ActionEmployee'
+import { Link } from "react-router-dom"
 
 
 
@@ -18,7 +19,7 @@ return(
         <span>adreese:{adresse}</span>
         </div>
         <div className="card-footer">
-        <button className="btn btn-primary">modifier</button>
+        <Link className="btn btn-primary" to={'/updateEmploye/${numero}'}>modifier</Link>
         <button className="btn btn-danger" onClick={()=>dispatch(deleteEmployee(numero))} >supprimer</button>
 
         </div>
