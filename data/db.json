@@ -1,24 +1,67 @@
 {
-    "users" : {
-        "id": "ahmed@gmail.com",
-        "nom" : "ahmed",
-        "password" : "1234",
-        "civilite": "masculin",
-        "adresse" : "sidi maarouf",
-        "profil" : "admin",
-        "ville" : "casa"
-    },
-
+  "users": [
     {
-        "id": "salma@gmail.com",
-        "nom": "salma",
-        "password" : "0000",
-        "civilite" : "feminin",
-        "adresse" : "hay hassani",
-        "profil" : "admin",
-        "ville" : "rabat"
+      "id": "ahmed@gmail.com",
+      "nom": "ahmed",
+      "password": "1234",
+      "civilite": "masculin",
+      "adresse": "sidi maarouf",
+      "profil": "admin",
+      "ville": "casa"
+    },
+    {
+      "id": "salma@gmail.com",
+      "nom": "salma",
+      "password": "0000",
+      "civilite": "feminin",
+      "adresse": "hay hassani",
+      "profil": "admin",
+      "ville": "rabat"
+    },
+    {
+      "id": "ahmed@gmail.com",
+      "nom": "ahmed",
+      "password": "ojzdnhjovzn",
+      "civilite": "masculin",
+      "ville": "",
+      "adreese": "zldjvnljznfv",
+      "profil": "admin"
+    },
+    {
+      "id": "ahmed@gmail.com",
+      "nom": "ahmed",
+      "password": "ojzdnhjovzn",
+      "civilite": "masculin",
+      "ville": "",
+      "adreese": "zldjvnljznfv",
+      "profil": "admin"
+    },
+    {
+      "id": "ahmed@gmail.com",
+      "nom": "ahmed",
+      "password": "ojzdnhjovzn",
+      "civilite": "masculin",
+      "ville": "",
+      "adreese": "zldjvnljznfv",
+      "profil": "admin"
+    },
+    {
+      "id": "gomucode@gmail.com",
+      "nom": "ahmed",
+      "password": "ojzdnhjovzn",
+      "civilite": "masculin",
+      "ville": "",
+      "adreese": "zldjvnljznfv",
+      "profil": "admin"
+    },
+    {
+      "id": "ritouny",
+      "nom": "hassan",
+      "password": "1234",
+      "civilite": "masculin",
+      "ville": "",
+      "adreese": "hay hassani",
+      "profil": "admin"
     }
-       
-    
-
+  ]
 }
