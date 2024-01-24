@@ -1,0 +1,24 @@
+{
+    "users" : {
+        "id": "ahmed@gmail.com",
+        "nom" : "ahmed",
+        "password" : "1234",
+        "civilite": "masculin",
+        "adresse" : "sidi maarouf",
+        "profil" : "admin",
+        "ville" : "casa"
+    },
+
+    {
+        "id": "salma@gmail.com",
+        "nom": "salma",
+        "password" : "0000",
+        "civilite" : "feminin",
+        "adresse" : "hay hassani",
+        "profil" : "admin",
+        "ville" : "rabat"
+    }
+       
+    
+
+}
