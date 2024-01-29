@@ -14,7 +14,7 @@ const Enregistrement = () =>{
  const [adresse,setAdresse] = useState("adresse")
  const [succes, setSuccess] = useState("false")
  const [msgError,setMsgError] = useState('')
- const urlUsers= "http://localhost:3500/users"
+ const urlUsers= "http://localhost:3000/users"
 
 
 
@@ -24,6 +24,13 @@ async function handleSubmit(e){
 try{
     const response= await axios.post(urlUsers,user)
     setSuccess(true)
+    setNom("")
+    setVille("")
+    setCivilite("")
+    setPassword("")
+    setEmail("")
+    setAdresse("")
+    
 } catch (error){
     setMsgError(error.message)
     setSuccess(false)
@@ -51,7 +58,7 @@ return(
                         <div className="form-group">
                     
                 <label>
-                nom  <span className="errmsg">*</span>
+                nom<span className="errmsg">*</span>
                     </label>
                     <input
                     type="text"

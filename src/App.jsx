@@ -12,6 +12,7 @@ import Enregistrement from './page/Enregistrement'
 
 
 
+
 function App() {
 
 
@@ -19,19 +20,13 @@ function App() {
     
       <div className='App'>
         <Menu/>
-
           <Routes>
-
-            
               <Route path='/' element={<Home/>}/> 
               <Route path='/employe' element={<ListEmployee/>}/> 
               <Route path='/addEmploye' element={<AddEmploye/>}/> 
               <Route path='/updateEmploye/:numero' element={<UpdateEmploye/>}/>
               <Route path='*' element={<NotFound/>}/>
               <Route path='/registre' element={<Enregistrement/>}/> 
-
-            
-            
           </Routes>
       </div>
         

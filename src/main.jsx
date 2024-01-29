@@ -18,7 +18,6 @@ import { BrowserRouter } from 'react-router-dom'
     <Provider store={store}>
     <App />
     </Provider>
-    
     </BrowserRouter>
   </React.StrictMode>,
 )
