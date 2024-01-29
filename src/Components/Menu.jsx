@@ -25,6 +25,11 @@ const Menu = () =>{
                       <Link className="nav-link" to='/registre'>Enregistrement</Link>
                       
                     </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to='/logo'>Login</Link>
+                      
+                    </li>
+
                     
                     <li className="nav-item">
                       <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true"></a>
