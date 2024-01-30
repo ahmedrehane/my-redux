@@ -19,7 +19,7 @@ return(
         <span>adreese:{adresse}</span>
         </div>
         <div className="card-footer">
-        <Link className="btn btn-primary" to={'/updateEmploye/${numero}'}>modifier</Link>
+        <Link className="btn btn-primary" to={`/updateEmploye/${numero}`}>modifier</Link>
         <button className="btn btn-danger" onClick={()=>dispatch(deleteEmployee(numero))} >supprimer</button>
 
         </div>

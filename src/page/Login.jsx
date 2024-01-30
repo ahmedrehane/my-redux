@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 const Login = () =>{
     const [password, setPassword] = useState("")
     const [email,setEmail] = useState("")
-    const [success, setSuccess] = useState("")
+    const [success, setSuccess] = useState(false)
+    const [erreur, setErreur] = useState('')
 
     //endpoint de l' api users
 
@@ -15,6 +16,13 @@ const Login = () =>{
     e.preventDefault();
     try {
         const response=await axios.get(`${urlUsers}/${email}`)
+        const user=response.data
+        if(user?.password===password){
+            setErreur("you are logged ok")
+        }
+        else{
+            setErreur("not logged verify your data")
+        }
         console.log(response)
     } catch (error) {
         setSuccess(false)
@@ -33,7 +41,10 @@ const Login = () =>{
            <form className="container" onSubmit={(event)=>handleSubmit(event)}>
                    <div className="card">
                    <div className="card-header">
-                   <h1>Login</h1>  
+                   <h1>Login</h1>
+                   {success}
+                   {erreur}
+
                    </div>
                    <div className="card-body">
                    <div className="row">
