@@ -18,7 +18,8 @@ const Login = () =>{
         const response=await axios.get(`${urlUsers}/${email}`)
         const user=response.data
         if(user?.password===password){
-            setErreur("you are logged ok")
+
+            setSuccess(true)
         }
         else{
             setErreur("not logged verify your data")
@@ -26,7 +27,7 @@ const Login = () =>{
         console.log(response)
     } catch (error) {
         setSuccess(false)
-        console.log(error)
+        setErreur("erreur:  "+error.message)
 
     }
  }
@@ -42,8 +43,8 @@ const Login = () =>{
                    <div className="card">
                    <div className="card-header">
                    <h1>Login</h1>
-                   {success}
-                   {erreur}
+                   {success && <p style={{color:"green"}}>you are logged</p>}
+                   {!success && <p style={{color:"red"}}>{erreur}</p>}
 
                    </div>
                    <div className="card-body">
