@@ -28,10 +28,11 @@ function App() {
               <Route path='/' element={<Home/>}/> 
               {currentUser && <Route path='/addEmploye' element={<AddEmploye/>}/> }
               {currentUser && <Route path='/employe' element={<ListEmployee/>}/> }
+              {!currentUser &&<Route path='/login' element={<Login/>}/> }
               <Route path='/updateEmploye/:numero' element={<UpdateEmploye/>}/>
               <Route path='*' element={<NotFound/>}/>
               <Route path='/registre' element={<Enregistrement/>}/> 
-              <Route path='/login' element={<Login/>}/> 
+              
 
           </Routes>
       </div>

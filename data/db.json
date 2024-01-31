@@ -206,6 +206,24 @@
       "ville": "",
       "adreese": "zenith",
       "profil": "admin"
+    },
+    {
+      "id": "ahmed@gmailcom",
+      "nom": "",
+      "password": "azerty123",
+      "civilite": "feminin",
+      "ville": "",
+      "adreese": "adresse",
+      "profil": "admin"
+    },
+    {
+      "id": "rehane@gmail.com",
+      "nom": "",
+      "password": "1972",
+      "civilite": "masculin",
+      "ville": "",
+      "adreese": "",
+      "profil": "admin"
     }
   ]
 }

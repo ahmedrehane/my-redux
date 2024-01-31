@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../redux/ActionCurrentUser";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () =>{
     const [password, setPassword] = useState("")
@@ -10,6 +12,7 @@ const Login = () =>{
     const [success, setSuccess] = useState(false)
     const [erreur, setErreur] = useState('')
     const dispatch=useDispatch()
+    const navigate=useNavigate()
 
     //endpoint de l' api users
 
@@ -25,6 +28,7 @@ const Login = () =>{
             dispatch(login(email,nom,civilite,profile))
 
             setSuccess(true)
+            navigate("/")
         }
         else{
             setErreur("not logged verify your data")
