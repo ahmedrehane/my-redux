@@ -2,11 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../redux/ActionCurrentUser";
+import { useSelector } from "react-redux";
+
 
 
 
 const Menu = () =>{
   const dispatch=useDispatch()
+  const currentUser=useSelector(state=>state.currentUser)
     return(
 <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container-fluid">
@@ -18,13 +21,15 @@ const Menu = () =>{
                   <ul className="navbar-nav">
                     <li className="nav-item">
                       <Link className="nav-link active" aria-current="page" to='/'>Home</Link>
-                    </li>
-                    <li className="nav-item">
+                      </li>
+                      {currentUser &&  <li className="nav-item">
                       <Link className="nav-link" to='/employe'>Employe</Link>
-                    </li>
-                    <li className="nav-item">
+                    </li>}
+                    {currentUser && <li className="nav-item">
                       <Link className="nav-link" to='/addEmploye'>Ajouter employe</Link>
-                    </li>
+                    </li> }
+                    
+                  
                     <li className="nav-item">
                       <Link className="nav-link" to='/registre'>Enregistrement</Link>
                       
