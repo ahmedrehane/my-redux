@@ -170,6 +170,42 @@
       "ville": "",
       "adreese": "adresse",
       "profil": "admin"
+    },
+    {
+      "id": "hafsa@gmail.com",
+      "nom": "hafsa",
+      "password": "12345",
+      "civilite": "feminin",
+      "ville": "",
+      "adreese": "hay raja",
+      "profil": "admin"
+    },
+    {
+      "id": "hassan@gmail.com",
+      "nom": "hassanritouny",
+      "password": "hassan1000",
+      "civilite": "masculin",
+      "ville": "rabat",
+      "adreese": "bd, nershore rue malwya",
+      "profil": "admin"
+    },
+    {
+      "id": "taki@gmail.com",
+      "nom": "hassan taki",
+      "password": "hassan1888",
+      "civilite": "masculin",
+      "ville": "",
+      "adreese": "bd,hassan 2",
+      "profil": "admin"
+    },
+    {
+      "id": "rehane@gmail.com",
+      "nom": "ahmed",
+      "password": "1972",
+      "civilite": "feminin",
+      "ville": "",
+      "adreese": "zenith",
+      "profil": "admin"
     }
   ]
 }

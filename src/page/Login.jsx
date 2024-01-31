@@ -1,12 +1,15 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../redux/ActionCurrentUser";
 
 const Login = () =>{
     const [password, setPassword] = useState("")
     const [email,setEmail] = useState("")
     const [success, setSuccess] = useState(false)
     const [erreur, setErreur] = useState('')
+    const dispatch=useDispatch()
 
     //endpoint de l' api users
 
@@ -18,11 +21,14 @@ const Login = () =>{
         const response=await axios.get(`${urlUsers}/${email}`)
         const user=response.data
         if(user?.password===password){
+            const {id,nom,civilite,profile}=user
+            dispatch(login(email,nom,civilite,profile))
 
             setSuccess(true)
         }
         else{
             setErreur("not logged verify your data")
+            setSuccess(false)
         }
         console.log(response)
     } catch (error) {

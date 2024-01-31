@@ -9,12 +9,15 @@ import Menu from './Components/Menu'
 import UpdateEmploye from './page/UpdateEmploye'
 import Enregistrement from './page/Enregistrement' 
 import Login from './page/Login'
+import { useSelector } from 'react-redux'
 
 
 
 
 
 function App() {
+
+  const currentUser=useSelector(state=>state.currentUser)
 
 
   return (
@@ -23,12 +26,12 @@ function App() {
         <Menu/>
           <Routes>
               <Route path='/' element={<Home/>}/> 
-              <Route path='/employe' element={<ListEmployee/>}/> 
-              <Route path='/addEmploye' element={<AddEmploye/>}/> 
+              {currentUser && <Route path='/addEmploye' element={<AddEmploye/>}/> }
+              {currentUser && <Route path='/employe' element={<ListEmployee/>}/> }
               <Route path='/updateEmploye/:numero' element={<UpdateEmploye/>}/>
               <Route path='*' element={<NotFound/>}/>
               <Route path='/registre' element={<Enregistrement/>}/> 
-              <Route path='/logo' element={<Login/>}/> 
+              <Route path='/login' element={<Login/>}/> 
 
           </Routes>
       </div>

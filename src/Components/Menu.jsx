@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logout } from "../redux/ActionCurrentUser";
+
 
 
 const Menu = () =>{
+  const dispatch=useDispatch()
     return(
 <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container-fluid">
@@ -26,7 +30,12 @@ const Menu = () =>{
                       
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to='/logo'>Login</Link>
+                      <Link className="nav-link" to='/login'>Login</Link>
+                      
+                    </li>
+
+                    <li className="nav-item">
+                      <button className="nav-link" onClick={()=>dispatch(logout())}>Logout</button>
                       
                     </li>
 

@@ -1,9 +1,11 @@
 import * as type from './TypeActionEmployee'
+import { LOGIN,LOGOUT } from './TypeActionCurrentUser' 
 
 
 
 const initState={
-    employes:[]
+    employes:[],
+    currentUser:null
     
 }
 
@@ -25,6 +27,10 @@ switch (action.type) {
         })
 
         }
+        case LOGIN:
+            return {...state,currentUser:action.payload}
+            case LOGOUT:
+             return {...state,currentUser:null}
     default:
       return  state;
 }
