@@ -13,8 +13,6 @@ import { useSelector } from 'react-redux'
 
 
 
-
-
 function App() {
 
   const currentUser=useSelector(state=>state.currentUser)
@@ -29,7 +27,7 @@ function App() {
               {currentUser && <Route path='/addEmploye' element={<AddEmploye/>}/> }
               {currentUser && <Route path='/employe' element={<ListEmployee/>}/> }
               {!currentUser &&<Route path='/login' element={<Login/>}/> }
-              {!currentUser && <Route path='/registre' element={<Enregistrement/>}/> }
+              {currentUser && <Route path='/registre' element={<Enregistrement/>}/> }
 
               <Route path='/updateEmploye/:numero' element={<UpdateEmploye/>}/>
               <Route path='*' element={<NotFound/>}/>

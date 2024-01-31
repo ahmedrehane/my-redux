@@ -69,7 +69,7 @@ return(
                 </div>
                 </div>
                 <div className="col-lg-6">
-                <div className="form-group">
+                <div className="form-group ">
                     <label>
                     email<span className="errmsg">*</span>
                     </label> 
