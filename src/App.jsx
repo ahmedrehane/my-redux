@@ -29,9 +29,11 @@ function App() {
               {currentUser && <Route path='/addEmploye' element={<AddEmploye/>}/> }
               {currentUser && <Route path='/employe' element={<ListEmployee/>}/> }
               {!currentUser &&<Route path='/login' element={<Login/>}/> }
+              {!currentUser && <Route path='/registre' element={<Enregistrement/>}/> }
+
               <Route path='/updateEmploye/:numero' element={<UpdateEmploye/>}/>
               <Route path='*' element={<NotFound/>}/>
-              <Route path='/registre' element={<Enregistrement/>}/> 
+              
               
 
           </Routes>

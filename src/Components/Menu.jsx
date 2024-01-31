@@ -28,21 +28,21 @@ const Menu = () =>{
                     {currentUser && <li className="nav-item">
                       <Link className="nav-link" to='/addEmploye'>Ajouter employe</Link>
                     </li> }
-                    
-                  
-                    <li className="nav-item">
-                      <Link className="nav-link" to='/registre'>Enregistrement</Link>
-                      
-                    </li>
-                    <li className="nav-item">
+                      {!currentUser &&  <li className="nav-item">
                       <Link className="nav-link" to='/login'>Login</Link>
-                      
-                    </li>
+                    </li> }
+                    {currentUser && <li className="nav-item">
+                      <Link className="nav-link" to='/registre'>Enregistrement</Link>
+                    </li>}
 
-                    <li className="nav-item">
+                    
+                   {currentUser && <li className="nav-item">
                       <button className="nav-link" onClick={()=>dispatch(logout())}>Logout</button>
                       
-                    </li>
+                    </li>}
+
+
+                    
 
                     
                     <li className="nav-item">
